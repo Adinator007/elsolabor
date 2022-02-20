@@ -3,6 +3,7 @@ import org.w3c.dom.HTMLCanvasElement
 import vision.gears.webglmath.Mat4
 import vision.gears.webglmath.Vec2
 import vision.gears.webglmath.Vec4
+import kotlin.js.Console
 import kotlin.js.Date
 import kotlin.properties.Delegates
 import org.khronos.webgl.WebGLRenderingContext as GL //# GL# we need this for the constants declared ˙HUN˙ a constansok miatt kell
@@ -61,8 +62,10 @@ class Scene (
             gl.getUniformLocation(
                     garishProgram.glProgram,
                     "uniformColor"),
-            x, y, z, a)
-
+            x, y, z, a);
+            // ide hozzateszek meg par sor kommentet, hogy lassam mi a helyzet
+            val a: Int = 12
+    println(a)
   }
 
   fun reset(){
